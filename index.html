@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proDUCKtive — Agencia Creativa</title>
+    <meta name="description" content="proDUCKtive es una agencia creativa: branding, marketing digital, diseño gráfico, producción audiovisual, fotografía, música, desarrollo web y comunicación. ¡Creatividad con pato!">
+    <meta property="og:title" content="proDUCKtive — Agencia Creativa">
+    <meta property="og:description" content="La agencia creativa diferente: branding, marketing, diseño, audiovisual, fotografía, música y web. ¡Cuac!">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="assets/isotipo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav" aria-label="Navegación">
+        <a href="#inicio" class="nav__logo" aria-label="proDUCKtive">
+            <img src="assets/logo-1.jpg" alt="proDUCKtive">
+        </a>
+        <div class="nav__links">
+            <a href="#servicios">Servicios</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <button class="nav__burger" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="inicio">
+        <div class="sticker sticker--rotate float-slow" style="top:18%;left:4%;" data-parallax="0.2" data-rot="-8deg">✨ ideas locas</div>
+        <div class="sticker sticker--black sticker--rotate2 float-slow2" style="top:30%;right:6%;" data-parallax="0.12" data-rot="6deg">🎬 hacemos de todo</div>
+        <div class="sticker sticker--white sticker--rotate float-slow" style="bottom:30%;left:10%;" data-parallax="0.18" data-rot="-5deg">🦆 cuac</div>
+
+        <div class="hero__inner">
+            <span class="hero__kicker reveal">agenciA creativa · El Salvador</span>
+            <h1>
+                <span class="line reveal">pro<span class="duck-word">DUCK</span></span>
+                <span class="line reveal reveal-delay-1">tive</span>
+            </h1>
+            <p class="hero__sub reveal reveal-delay-2">
+                Branding, marketing, diseño, audiovisual, fotografía, música y web.
+                Hacemos que tu marca <strong>cuacque</strong> diferente.
+            </p>
+            <a href="#portafolio" class="hero__cta reveal reveal-delay-3">Ver lo que hacemos ↓</a>
+        </div>
+
+        <img src="assets/isotipo.png" alt="El pato de proDUCKtive" class="hero__duck">
+        <span class="hero__scroll-hint">deslizá</span>
+    </header>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+            <span>branding 🦆</span><span>marketing 📣</span><span>diseño 🎨</span><span>audiovisual 🎬</span><span>fotografía 📸</span><span>música 🎵</span><span>web 💻</span><span>estrategia 🧠</span><span>branding 🦆</span><span>marketing 📣</span><span>diseño 🎨</span><span>audiovisual 🎬</span><span>fotografía 📸</span><span>música 🎵</span><span>web 💻</span><span>estrategia 🧠</span>
+        </div>
+    </div>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section class="services section-black" id="servicios">
+        <div class="wrap">
+            <p class="section-title reveal" style="font-size:clamp(1rem,2vw,1.4rem);opacity:.6;text-transform:uppercase;letter-spacing:2px;">— lo que hacemos</p>
+            <h2 class="big-title reveal" style="margin-top:10px;">10 super<br>poderes</h2>
+            <div class="services__grid">
+                <article class="service-card reveal" data-service="branding">
+                    <span class="service-card__num">01</span>
+                    <span class="service-card__icon">🎯</span>
+                    <h3>Branding</h3>
+                    <p>Identidad, logo, personalidad. Tu marca con carácter desde el primer cuac.</p>
+                    <span class="service-card__emoji">🦆</span>
+                </article>
+                <article class="service-card reveal reveal-delay-1" data-service="diseno">
+                    <span class="service-card__num">02</span>
+                    <span class="service-card__icon">🎨</span>
+                    <h3>Diseño Gráfico</h3>
+                    <p>Piezas que llaman la atención y cuentan historias. Colores que explotan.</p>
+                    <span class="service-card__emoji">✏️</span>
+                </article>
+                <article class="service-card reveal reveal-delay-2" data-service="marketing">
+                    <span class="service-card__num">03</span>
+                    <span class="service-card__icon">📣</span>
+                    <h3>Marketing Digital</h3>
+                    <p>Campañas que hacen ruido (el bueno). Estrategias que convierten.</p>
+                    <span class="service-card__emoji">📈</span>
+                </article>
+                <article class="service-card reveal" data-service="redes">
+                    <span class="service-card__num">04</span>
+                    <span class="service-card__icon">📱</span>
+                    <h3>Redes Sociales</h3>
+                    <p>Contenido que engancha y hace crecer tu comunidad. Sin aburrir.</p>
+                    <span class="service-card__emoji">❤️</span>
+                </article>
+                <article class="service-card reveal reveal-delay-1" data-service="audiovisual">
+                    <span class="service-card__num">05</span>
+                    <span class="service-card__icon">🎬</span>
+                    <h3>Producción Audiovisual</h3>
+                    <p>Videos, spots, reels. Historias en movimiento que nadie quiere saltar.</p>
+                    <span class="service-card__emoji">🎥</span>
+                </article>
+                <article class="service-card reveal reveal-delay-2" data-service="fotografia">
+                    <span class="service-card__num">06</span>
+                    <span class="service-card__icon">📸</span>
+                    <h3>Fotografía</h3>
+                    <p>Producto, moda, eventos. Fotografías que venden con la mirada.</p>
+                    <span class="service-card__emoji">📷</span>
+                </article>
+                <article class="service-card reveal" data-service="musica">
+                    <span class="service-card__num">07</span>
+                    <span class="service-card__icon">🎵</span>
+                    <h3>Producción Musical</h3>
+                    <p>Jingles, sound branding, producción. Que tu marca también suene.</p>
+                    <span class="service-card__emoji">🎧</span>
+                </article>
+                <article class="service-card reveal reveal-delay-1" data-service="web">
+                    <span class="service-card__num">08</span>
+                    <span class="service-card__icon">💻</span>
+                    <h3>Diseño Web</h3>
+                    <p>Sitios que sorprenden y convierten. Experiencias, no catálogos.</p>
+                    <span class="service-card__emoji">🖥️</span>
+                </article>
+                <article class="service-card reveal reveal-delay-2" data-service="estrategia">
+                    <span class="service-card__num">09</span>
+                    <span class="service-card__icon">🧠</span>
+                    <h3>Estrategia</h3>
+                    <p>Planes con cabeza (y con pato). Caminos claros para crecer.</p>
+                    <span class="service-card__emoji">🗺️</span>
+                </article>
+                <article class="service-card reveal reveal-delay-3" data-service="direccion">
+                    <span class="service-card__num">10</span>
+                    <span class="service-card__icon">🦆</span>
+                    <h3>Dirección Creativa</h3>
+                    <p>El pato dirige. Ideas grandes, ejecución impecable, todo con flow.</p>
+                    <span class="service-card__emoji">🎬</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE 2 ===== -->
+    <div class="marquee marquee--black marquee--fast" aria-hidden="true">
+        <div class="marquee__track">
+            <span>no somos normales 🦆</span><span>no somos normales 💛</span><span>no somos normales 🦆</span><span>no somos normales 💛</span><span>no somos normales 🦆</span><span>no somos normales 💛</span><span>no somos normales 🦆</span><span>no somos normales 💛</span>
+        </div>
+    </div>
+
+    <!-- ===== PORTAFOLIO ===== -->
+    <section class="portfolio" id="portafolio">
+        <div class="wrap">
+            <p class="section-title reveal" style="font-size:clamp(1rem,2vw,1.4rem);opacity:.6;text-transform:uppercase;letter-spacing:2px;">— portafolio</p>
+            <h2 class="big-title reveal" style="margin-top:10px;">ya lo<br>hicimos</h2>
+            <div class="portfolio__grid">
+                <a href="portfolio/cindy-rubio.html" class="portfolio-card reveal">
+                    <img src="../assets/logo-2.jpg" alt="Proyecto Cindy Rubio" class="portfolio-card__img">
+                    <span class="portfolio-card__arrow">→</span>
+                    <div class="portfolio-card__overlay">
+                        <span class="portfolio-card__tag">música · identidad</span>
+                        <h3>Cindy Rubio</h3>
+                    </div>
+                </a>
+                <a href="portfolio/baratuss.html" class="portfolio-card reveal reveal-delay-1">
+                    <img src="../assets/logo-3.jpg" alt="Proyecto BARATUSS" class="portfolio-card__img">
+                    <span class="portfolio-card__arrow">→</span>
+                    <div class="portfolio-card__overlay">
+                        <span class="portfolio-card__tag">e-commerce · branding</span>
+                        <h3>BARATUSS</h3>
+                    </div>
+                </a>
+                <a href="#contacto" class="portfolio-card reveal reveal-delay-2" style="background:var(--amarillo);display:flex;align-items:center;justify-content:center;text-align:center;">
+                    <span style="font-family:var(--font-head);font-weight:700;text-transform:uppercase;font-size:clamp(1.4rem,3vw,2.2rem);color:var(--negro);line-height:1.1;">tu proyecto<br>aquí ✨</span>
+                    <span class="portfolio-card__arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NOSOTROS (experiencia interactiva) ===== -->
+    <section class="about" id="nosotros">
+        <div class="wrap">
+            <p class="section-title reveal" style="font-size:clamp(1rem,2vw,1.4rem);opacity:.7;text-transform:uppercase;letter-spacing:2px;">— nosotros</p>
+            <h2 class="big-title reveal" style="margin-top:10px;">así<br>nacimos</h2>
+            <div class="about__steps">
+                <div class="about-step reveal">
+                    <span class="about-step__num">1</span>
+                    <p>Un día un pato miró el mundo y dijo: <strong>"todo se ve muy aburrido"</strong>.</p>
+                </div>
+                <div class="about-step reveal reveal-delay-1">
+                    <span class="about-step__num">2</span>
+                    <p>Juntó crayones, cámaras, micrófonos y <strong>muchas ideas locas</strong>.</p>
+                </div>
+                <div class="about-step reveal reveal-delay-2">
+                    <span class="about-step__num">3</span>
+                    <p>Reclutó humanos creativos con <strong>café y stickers</strong>.</p>
+                </div>
+                <div class="about-step reveal reveal-delay-3">
+                    <span class="about-step__num">4</span>
+                    <p>Y nació <strong>proDUCKtive</strong>: la agencia que hace que tu marca <strong>cuacque</strong>.</p>
+                </div>
+            </div>
+        </div>
+        <span class="sticker sticker--black sticker--rotate float-slow" style="top:10%;right:8%;">😴 shhh... duerme</span>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="contact" id="contacto">
+        <div class="wrap">
+            <p class="section-title reveal" style="font-size:clamp(1rem,2vw,1.4rem);opacity:.6;text-transform:uppercase;letter-spacing:2px;color:var(--blanco);">— contacto</p>
+            <h2 class="big-title reveal" style="margin-top:10px;">hablemos<br><span class="outline-text" style="-webkit-text-stroke-color:var(--amarillo);">cuac</span> 🦆</h2>
+            <p class="reveal reveal-delay-1" style="max-width:560px;margin:26px auto 0;font-weight:500;opacity:.85;">
+                ¿Tenés una marca que quiere sonreír? Escribinos. Contestamos rápido, prometido (el pato lo vigila).
+            </p>
+            <a href="mailto:hola@productive.sv" class="contact__mail reveal reveal-delay-2">hola@productive.sv</a>
+            <div class="contact__socials reveal reveal-delay-3">
+                <a href="https://www.instagram.com/producktive.sv/" target="_blank" rel="noopener" class="contact__social">Instagram</a>
+                <a href="https://www.tiktok.com/@producktive.sv" target="_blank" rel="noopener" class="contact__social">TikTok</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <span>© <span class="js-year">2026</span> pro<span>DUCK</span>tive — todos los derechos cuac-cuac</span>
+        <span class="duck-mini">🦆</span>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
