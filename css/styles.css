@@ -502,12 +502,12 @@ section { position: relative; overflow: hidden; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 24px;
+    padding: 14px 24px;
     transition: background .3s, border-color .3s;
     border-bottom: 3px solid transparent;
 }
 .nav--solid { background: var(--amarillo); border-bottom-color: var(--negro); }
-.nav__logo { width: clamp(90px, 14vw, 150px); display: block; }
+.nav__logo { width: clamp(150px, 26vw, 320px); display: block; }
 .nav__logo img { width: 100%; }
 .nav__links { display: flex; gap: 22px; }
 .nav__links a {
