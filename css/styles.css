@@ -176,7 +176,7 @@ section { position: relative; overflow: hidden; }
     position: relative;
     overflow: hidden;
 }
-.hero__inner { padding: 240px 24px 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
+.hero__inner { padding: 150px 24px 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
 .hero__kicker {
     font-family: var(--font-head);
     font-weight: 700;
