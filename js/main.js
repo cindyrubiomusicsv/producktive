@@ -9,10 +9,10 @@
     const BASE = window.location.pathname.includes('/portfolio/') ? '../' : '';
 
     // ===== PATO GLOBAL (esquina inferior) =====
-    const DUCK_FRAMES = [BASE + 'assets/logo-sf-1.jpg', BASE + 'assets/pato-camina-2.png'];
+    const DUCK_FRAMES = [BASE + 'assets/logo-sf-4.jpg', BASE + 'assets/pato-camina-2.png'];
     const duckEl = document.createElement('div');
     duckEl.className = 'duck-follow';
-    duckEl.innerHTML = `<img src="${BASE}assets/logo-sf-1.jpg" alt="proDUCKtive">`;
+    duckEl.innerHTML = `<img src="${BASE}assets/logo-sf-4.jpg" alt="proDUCKtive">`;
     document.body.appendChild(duckEl);
     const duckImg = duckEl.querySelector('img');
 

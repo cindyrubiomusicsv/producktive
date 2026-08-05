@@ -34,15 +34,15 @@ button { font-family: var(--font-head); cursor: pointer; border: none; backgroun
    ============================================================ */
 .duck-cursor {
     position: fixed;
-    width: 56px; height: 56px;
+    width: 92px; height: 92px;
     pointer-events: none;
     z-index: 99999;
     background: url('../assets/pato.svg') no-repeat center / contain;
     transform: translate(-50%, -50%);
-    filter: drop-shadow(2px 4px 0 rgba(0,0,0,.25));
+    filter: drop-shadow(3px 5px 0 rgba(0,0,0,.25));
     will-change: left, top;
 }
-.duck-cursor.is-hovering { transform: translate(-50%, -50%) scale(1.25); filter: drop-shadow(2px 4px 0 rgba(0,0,0,.4)); }
+.duck-cursor.is-hovering { transform: translate(-50%, -50%) scale(1.15); filter: drop-shadow(3px 5px 0 rgba(0,0,0,.4)); }
 
 @media (hover: none), (pointer: coarse) {
     .duck-cursor { display: none; }
