@@ -6,10 +6,10 @@
     'use strict';
 
     // ===== PATO GLOBAL (esquina inferior) =====
-    const DUCK_FRAMES = ['assets/isotipo.png', 'assets/pato-camina-2.png'];
+    const DUCK_FRAMES = ['assets/pato.svg', 'assets/pato-camina-2.png'];
     const duckEl = document.createElement('div');
     duckEl.className = 'duck-follow';
-    duckEl.innerHTML = `<img src="assets/isotipo.png" alt="El pato de proDUCKtive">`;
+    duckEl.innerHTML = `<img src="assets/pato.svg" alt="El pato de proDUCKtive">`;
     document.body.appendChild(duckEl);
     const duckImg = duckEl.querySelector('img');
 
@@ -94,18 +94,26 @@
         sayQuack(Math.random() < 0.5 ? '¡Cuac! 🦆' : '¡Quack quack! 🦆💛');
     });
 
-    // ===== CURSOR PERSONALIZADO =====
+    // ===== CURSOR PERSONALIZADO (el pato te sigue) =====
     const cursor = document.createElement('div');
     cursor.className = 'duck-cursor';
+    cursor.innerHTML = `<img src="assets/pato.svg" alt="">`;
     document.body.appendChild(cursor);
     let cx = window.innerWidth / 2, cy = 200;
     let tx = cx, ty = cy;
-    document.addEventListener('mousemove', (e) => { tx = e.clientX; ty = e.clientY; });
+    let cursorRot = 0, cursorTargetRot = 0;
+    document.addEventListener('mousemove', (e) => {
+        tx = e.clientX; ty = e.clientY;
+        const vx = e.movementX || 0;
+        cursorTargetRot = Math.max(-30, Math.min(30, vx * 2.2));
+    });
     (function loop() {
-        cx += (tx - cx) * 0.28;
-        cy += (ty - cy) * 0.28;
+        cx += (tx - cx) * 0.25;
+        cy += (ty - cy) * 0.25;
+        cursorRot += (cursorTargetRot - cursorRot) * 0.12;
         cursor.style.left = cx + 'px';
         cursor.style.top = cy + 'px';
+        cursor.style.transform = `translate(-50%, -50%) rotate(${cursorRot}deg)`;
         requestAnimationFrame(loop);
     })();
     document.querySelectorAll('a, button, .service-card, .portfolio-card, input, textarea').forEach(el => {
@@ -160,7 +168,7 @@
     const aboutSection = document.querySelector('.about');
     if (aboutSection && !document.querySelector('.about__duck-sleep')) {
         const sleeping = document.createElement('img');
-        sleeping.src = 'assets/isotipo.png';
+        sleeping.src = 'assets/pato.svg';
         sleeping.alt = 'El pato durmiendo';
         sleeping.className = 'about__duck-sleep';
         sleeping.style.width = 'clamp(100px, 14vw, 170px)';
@@ -170,7 +178,7 @@
     // ===== PATO SOBRE FOTOS DEL PORTFOLIO =====
     document.querySelectorAll('.portfolio-card').forEach(card => {
         const duck = document.createElement('img');
-        duck.src = 'assets/isotipo.png';
+        duck.src = 'assets/pato.svg';
         duck.alt = 'El pato escondido';
         duck.className = 'portfolio-duck';
         card.appendChild(duck);
