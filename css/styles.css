@@ -269,8 +269,8 @@ section { position: relative; overflow: hidden; }
 }
 .service-card {
     background: var(--blanco);
-    color: var(--negro);
-    border: 3px solid var(--negro);
+    color: #000000;
+    border: 3px solid #000000;
     border-radius: 16px;
     padding: 26px;
     position: relative;
@@ -278,7 +278,7 @@ section { position: relative; overflow: hidden; }
     cursor: pointer;
     overflow: hidden;
 }
-.service-card:nth-child(3n) { background: var(--amarillo); }
+.service-card:nth-child(3n) { background: var(--amarillo); color: var(--negro); }
 .service-card:nth-child(4n) { transform: rotate(1.2deg); }
 .service-card:nth-child(5n) { transform: rotate(-1.2deg); }
 .service-card:hover {
