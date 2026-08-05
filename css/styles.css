@@ -191,6 +191,12 @@ section { position: relative; overflow: hidden; }
     transform: rotate(-2deg);
     margin-bottom: 30px;
 }
+.hero__logo {
+    width: min(100%, 900px);
+    max-width: 100%;
+    margin: 10px 0 6px;
+    display: block;
+}
 .hero h1 {
     font-family: var(--font-head);
     font-weight: 700;
