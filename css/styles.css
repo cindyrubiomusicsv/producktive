@@ -176,7 +176,7 @@ section { position: relative; overflow: hidden; }
     position: relative;
     overflow: hidden;
 }
-.hero__inner { padding: 90px 24px 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
+.hero__inner { padding: 50px 24px 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
 .hero__kicker {
     font-family: var(--font-head);
     font-weight: 700;
@@ -189,12 +189,12 @@ section { position: relative; overflow: hidden; }
     background: var(--blanco);
     box-shadow: 5px 5px 0 var(--negro);
     transform: rotate(-2deg);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .hero__logo {
     width: min(100%, 900px);
     max-width: 100%;
-    margin: 10px 0 6px;
+    margin: 0 0 4px;
     display: block;
 }
 .hero h1 {
