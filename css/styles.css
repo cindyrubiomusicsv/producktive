@@ -507,8 +507,17 @@ section { position: relative; overflow: hidden; }
     border-bottom: 3px solid transparent;
 }
 .nav--solid { background: var(--amarillo); border-bottom-color: var(--negro); }
-.nav__logo { width: clamp(150px, 26vw, 320px); display: block; }
-.nav__logo img { width: 100%; }
+.nav__logo {
+    height: clamp(52px, 9vh, 84px);
+    width: clamp(180px, 38vw, 460px);
+    display: block;
+}
+.nav__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+}
 .nav__links { display: flex; gap: 22px; }
 .nav__links a {
     font-family: var(--font-head);
