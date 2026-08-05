@@ -8,79 +8,15 @@
     // ===== BASE PATH (funciona en index y en portfolio/) =====
     const BASE = window.location.pathname.includes('/portfolio/') ? '../' : '';
 
-    // ===== PATO GLOBAL (esquina inferior) =====
-    const DUCK_FRAMES = [BASE + 'assets/logo-sf-4.jpg', BASE + 'assets/pato-camina-2.png'];
-    const duckEl = document.createElement('div');
-    duckEl.className = 'duck-follow';
-    duckEl.innerHTML = `<img src="${BASE}assets/logo-sf-4.jpg" alt="proDUCKtive">`;
-    document.body.appendChild(duckEl);
-    const duckImg = duckEl.querySelector('img');
+    // ===== PATO GLOBAL (esquina inferior) — QUITADO por petición =====
+    // const DUCK_FRAMES = [BASE + 'assets/logo-sf-4.jpg', BASE + 'assets/pato-camina-2.png'];
+    // const duckEl = document.createElement('div');
+    // duckEl.className = 'duck-follow';
+    // duckEl.innerHTML = `<img src="${BASE}assets/logo-sf-4.jpg" alt="proDUCKtive">`;
+    // document.body.appendChild(duckEl);
+    // const duckImg = duckEl.querySelector('img');
 
-    let duckState = 'idle';       // idle | walking | hidden | sleeping
-    let duckWalkTimer = null;
-    let duckHiddenUntil = 0;
-
-    // Saluda al cargar
-    setTimeout(() => {
-        duckEl.style.transform = 'rotate(-10deg)';
-        setTimeout(() => { duckEl.style.transform = 'rotate(6deg)'; }, 180);
-        setTimeout(() => { duckEl.style.transform = ''; }, 380);
-        sayQuack('¡Cuac! 👋');
-    }, 1200);
-
-    // Camina por la esquina cada cierto tiempo
-    function startDuckWalk() {
-        if (duckState !== 'idle') return;
-        duckState = 'walking';
-        duckEl.classList.add('is-walking');
-        let step = 0;
-        duckWalkTimer = setInterval(() => {
-            step++;
-            duckImg.src = DUCK_FRAMES[step % 2];
-        }, 260);
-        setTimeout(() => {
-            clearInterval(duckWalkTimer);
-            duckEl.classList.remove('is-walking');
-            duckImg.src = DUCK_FRAMES[0];
-            duckState = 'idle';
-        }, 2600);
-    }
-    setInterval(() => {
-        if (Math.random() < 0.5) startDuckWalk();
-    }, 14000);
-
-    // El pato mira el cursor (se inclina hacia él)
-    let lastDuckLook = 0;
-    document.addEventListener('mousemove', (e) => {
-        const now = Date.now();
-        if (now - lastDuckLook < 180) return;
-        lastDuckLook = now;
-        const vw = window.innerWidth;
-        const vh = window.innerHeight;
-        const relX = (e.clientX / vw) - 0.5;
-        const relY = (e.clientY / vh) - 0.5;
-        const rot = Math.max(-14, Math.min(14, relX * 40));
-        const ty = Math.max(-10, Math.min(10, relY * 24));
-        if (duckState === 'idle') {
-            duckEl.style.transform = `rotate(${rot}deg) translateY(${ty}px)`;
-        }
-    });
-
-    // El pato se esconde cuando llegás abajo (footer), y reaparece al subir
-    window.addEventListener('scroll', () => {
-        const footer = document.querySelector('.footer');
-        if (!footer) return;
-        const fr = footer.getBoundingClientRect();
-        if (fr.top < window.innerHeight && fr.bottom > 0) {
-            if (duckState === 'idle') { duckEl.classList.add('duck-hidden'); duckState = 'hidden'; }
-        } else if (duckState === 'hidden' && Date.now() > duckHiddenUntil) {
-            duckEl.classList.remove('duck-hidden');
-            duckState = 'idle';
-        }
-    }, { passive: true });
-
-    // El pato duerme en la sección Nosotros (aparece su doble durmiendo)
-    // Se detecta con IntersectionObserver sobre la sección about
+    let duckState = 'idle';
 
     // ===== TOAST (cuac) =====
     function sayQuack(text) {
@@ -91,11 +27,6 @@
         requestAnimationFrame(() => t.classList.add('show'));
         setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 350); }, 2600);
     }
-
-    // Cuac al hacer clic en el pato
-    duckEl.addEventListener('click', () => {
-        sayQuack(Math.random() < 0.5 ? '¡Cuac! 🦆' : '¡Quack quack! 🦆💛');
-    });
 
     // ===== CURSOR PERSONALIZADO (el pato te sigue) =====
     const cursor = document.createElement('div');
