@@ -172,11 +172,11 @@ section { position: relative; overflow: hidden; }
     background: var(--amarillo);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     overflow: hidden;
 }
-.hero__inner { padding: 150px 24px 80px; max-width: 1400px; margin: 0 auto; width: 100%; }
+.hero__inner { padding: 70px 24px 60px; max-width: 1400px; margin: 0 auto; width: 100%; }
 .hero__kicker {
     font-family: var(--font-head);
     font-weight: 700;
