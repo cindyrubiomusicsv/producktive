@@ -55,16 +55,16 @@ body.duck-cursor-on a, body.duck-cursor-on button { cursor: none; }
    ============================================================ */
 .marquee {
     background: var(--amarillo);
-    color: var(--negro);
-    border-top: 3px solid var(--negro);
-    border-bottom: 3px solid var(--negro);
+    color: var(--blanco);
+    border-top: 3px solid var(--blanco);
+    border-bottom: 3px solid var(--blanco);
     overflow: hidden;
     padding: 14px 0;
     white-space: nowrap;
     position: relative;
     z-index: 2;
 }
-.marquee--black { background: var(--negro); color: var(--amarillo); border-color: var(--amarillo); }
+.marquee--black { background: var(--negro); color: #000000; border-color: #000000; }
 .marquee__track {
     display: inline-block;
     animation: marquee 22s linear infinite;
@@ -83,9 +83,9 @@ body.duck-cursor-on a, body.duck-cursor-on button { cursor: none; }
    ============================================================ */
 section { position: relative; overflow: hidden; }
 
-.section-black { background: var(--negro); color: #000000; }
+.section-black { background: var(--negro); color: #FFFFFF; }
 .section-yellow { background: var(--amarillo); color: var(--negro); }
-.section-white { background: var(--blanco); color: var(--negro); }
+.section-white { background: var(--blanco); color: #000000; }
 
 .wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 2; }
 
@@ -260,7 +260,7 @@ section { position: relative; overflow: hidden; }
 /* ============================================================
    SERVICIOS
    ============================================================ */
-.services { background: var(--negro); color: #000000; padding: 120px 0; }
+.services { background: var(--negro); color: #FFFFFF; padding: 120px 0; }
 .services__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -419,7 +419,7 @@ section { position: relative; overflow: hidden; }
 /* ============================================================
    CONTACTO
    ============================================================ */
-.contact { background: var(--negro); color: #000000; padding: 120px 0; text-align: center; }
+.contact { background: var(--negro); color: #FFFFFF; padding: 120px 0; text-align: center; }
 .contact__mail {
     font-family: var(--font-head);
     font-weight: 700;
