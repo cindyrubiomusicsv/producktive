@@ -83,7 +83,7 @@ body.duck-cursor-on a, body.duck-cursor-on button { cursor: none; }
    ============================================================ */
 section { position: relative; overflow: hidden; }
 
-.section-black { background: var(--negro); color: var(--blanco); }
+.section-black { background: var(--negro); color: #000000; }
 .section-yellow { background: var(--amarillo); color: var(--negro); }
 .section-white { background: var(--blanco); color: var(--negro); }
 
@@ -260,7 +260,7 @@ section { position: relative; overflow: hidden; }
 /* ============================================================
    SERVICIOS
    ============================================================ */
-.services { background: var(--negro); color: var(--blanco); padding: 120px 0; }
+.services { background: var(--negro); color: #000000; padding: 120px 0; }
 .services__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -419,7 +419,7 @@ section { position: relative; overflow: hidden; }
 /* ============================================================
    CONTACTO
    ============================================================ */
-.contact { background: var(--negro); color: var(--blanco); padding: 120px 0; text-align: center; }
+.contact { background: var(--negro); color: #000000; padding: 120px 0; text-align: center; }
 .contact__mail {
     font-family: var(--font-head);
     font-weight: 700;
